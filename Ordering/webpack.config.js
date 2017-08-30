@@ -24,13 +24,8 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      },
+      // {test: /\.(png|jpg|jpeg|gif|woff)$/, loader: 'url-loader?limit=4192&name=../ordering/[path][name].[ext]' },
+      {test: /\.(png|jpg|jpeg|gif|woff)$/, loader: 'url-loader?limit=4192&name=../Ordering/dist/imgs/[name].[ext]' },
       {
           test: /\.scss$/,
           exclude: /node_modules/,
